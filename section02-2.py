@@ -20,5 +20,29 @@ print(myName)
 
 if myName == "GoodBoy":
     print("OK")
-else:
-    print("NO")
+
+
+# 반복문
+
+for i in range(1,10):
+    for j in range(1,10):
+        print('%d * %d = ' % (i,j),i*j)
+
+# 함수 선언
+
+def greeting():
+    print("Hello")
+
+greeting()
+
+# 클래스
+
+class Cookie:
+    pass
+
+# 객체 생성
+Cookie = Cookie()
+
+print(id(Cookie))
+print(dir(Cookie))
+
