@@ -10,6 +10,10 @@ for n in q1.keys():
     if n == "가을":
         print(q1[n])
 
+for k,v in q1.items():
+    if k == "가을":
+        print(v)
+
 # 2. 아래 딕셔너리에서 '사과'가 포함되었는지 확인하세요.
 q2 =  {"봄": "딸기", "여름": "토마토", "가을": "사과"}
 
@@ -56,14 +60,11 @@ else:
 
 # 5. 다음 주민등록 번호에서 7자리 숫자를 사용해서 남자, 여자를 판별하세요. (1,3 : 남자, 2,4 : 여자)
 
-id_no1 = '1234567'
-id_no2 = '2234567'
-id_no3 = '3234567'
-id_no4 = '4234567'
+id_no = '1234567'
 
-if id_no1[0] == '1' or id_no1[0] == '3':
+if id_no[0] == '1' or id_no[0] == '3':
     print("남자")
-elif id_no1[0] == '2' or id_no1[0] == '4':
+elif id_no[0] == '2' or id_no[0] == '4':
     print("여자")
 else:
     print("식별 불가")
@@ -79,6 +80,10 @@ for i in q3:
     else:
         print(i)
 
+q3_1 = [x for x in q3 if x != '정']
+
+print("q3_1 : ",q3_1)
+
 # 7. 1부터 100까지 자연수 중 '홀수'만 한 라인으로 출력 하세요.
 
 str_odd = ""
@@ -88,6 +93,14 @@ for i in range(1,101):
         str_odd += str(i)
 print(str_odd)
 
+for i in range(1,101):
+    if i%2 != 0:
+        print(i, end=',')
+print()
+
+q_odd = [x for x in range(1,101) if x%2 == 1]
+
+print(q_odd)
 
 # 8. 아래 리스트 항목 중에서 5글자 이상의 단어만 출력하세요.
 q4 = ["nice", "study", "python", "anaconda", "!"]
@@ -111,3 +124,9 @@ for i in q6:
         print(i.lower())
     else:
         print(i.upper())
+
+
+# 리스트 컴프리헨션
+
+a = [x for x in range(1,101)]
+print(a)
